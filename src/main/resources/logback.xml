@@ -9,8 +9,7 @@
 		</layout>
 	</appender>
 
-	<logger name="de.predikant" level="debug"
-		additivity="false">
+	<logger name="de.predikant" level="debug" additivity="false">
 		<appender-ref ref="STDOUT" />
 	</logger>
 

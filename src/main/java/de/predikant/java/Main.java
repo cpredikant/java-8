@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import de.predikant.java.interfaces.InterfaceWithDefaults;
+import de.predikant.java.interfaces.InterfaceWithDefaultsFactory;
 import de.predikant.java.interfaces.InterfaceWithDefaultsImpl;
 import de.predikant.java.interfaces.InterfaceWithDefaultsOverrideImpl;
 import de.predikant.java.lambda.LambdaExample;
@@ -19,10 +20,10 @@ public class Main {
 		le.lambdas();
 		
 		
-		InterfaceWithDefaults iwd = new InterfaceWithDefaultsImpl();
+		InterfaceWithDefaults iwd = InterfaceWithDefaultsFactory.create(InterfaceWithDefaultsImpl::new);
 		LOGGER.debug("Interface Impl with call of default impl: {}", iwd.sayHelloTo("Christian"));
 		
-		InterfaceWithDefaults iwdo = new InterfaceWithDefaultsOverrideImpl();
+		InterfaceWithDefaults iwdo = InterfaceWithDefaultsFactory.create(InterfaceWithDefaultsOverrideImpl::new);
 		LOGGER.debug("Interface Impl with call of overridden default impl: {}", iwdo.sayHelloTo("Christian"));
 		
 		

@@ -8,6 +8,7 @@ import de.predikant.java.interfaces.InterfaceWithDefaultsFactory;
 import de.predikant.java.interfaces.InterfaceWithDefaultsImpl;
 import de.predikant.java.interfaces.InterfaceWithDefaultsOverrideImpl;
 import de.predikant.java.lambda.LambdaExample;
+import de.predikant.java.methodreferences.PlaneMethodReferencesExample;
 
 public class Main {
 	
@@ -26,6 +27,10 @@ public class Main {
 		InterfaceWithDefaults iwdo = InterfaceWithDefaultsFactory.create(InterfaceWithDefaultsOverrideImpl::new);
 		LOGGER.debug("Interface Impl with call of overridden default impl: {}", iwdo.sayHelloTo("Christian"));
 		
+		
+		LOGGER.debug("Method references example");
+		PlaneMethodReferencesExample pmre = new PlaneMethodReferencesExample();
+		pmre.doExample();
 		
 		LOGGER.debug("End Main");
 	}

@@ -9,6 +9,7 @@ import de.predikant.java.interfaces.InterfaceWithDefaultsFactory;
 import de.predikant.java.interfaces.InterfaceWithDefaultsImpl;
 import de.predikant.java.interfaces.InterfaceWithDefaultsOverrideImpl;
 import de.predikant.java.lambda.LambdaExample;
+import de.predikant.java.methodreferences.PlaneMethodReferencesExample;
 
 public class Main {
 	
@@ -29,6 +30,10 @@ public class Main {
 		
 		DrinkableBeer.readDrinkableBeer();
 		
+		
+		LOGGER.debug("Method references example");
+		PlaneMethodReferencesExample pmre = new PlaneMethodReferencesExample();
+		pmre.doExample();
 		
 		LOGGER.debug("End Main");
 	}

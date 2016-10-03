@@ -11,6 +11,7 @@ import de.predikant.java.interfaces.InterfaceWithDefaultsImpl;
 import de.predikant.java.interfaces.InterfaceWithDefaultsOverrideImpl;
 import de.predikant.java.lambda.LambdaExample;
 import de.predikant.java.methodreferences.PlaneMethodReferencesExample;
+import de.predikant.java.optional.OptionalExamples;
 
 public class Main {
 	
@@ -38,6 +39,8 @@ public class Main {
 		
 		LOGGER.debug("Annotations Everywhere, but you don't see them.");
 		PrayFlanders.doIt();
+		
+		OptionalExamples.trySomeOptionals();
 		
 		LOGGER.debug("End Main");
 	}

@@ -3,6 +3,7 @@ package de.predikant.java;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import de.predikant.java.annotation.everywhere.PrayFlanders;
 import de.predikant.java.annotation.repeating.DrinkableBeer;
 import de.predikant.java.interfaces.InterfaceWithDefaults;
 import de.predikant.java.interfaces.InterfaceWithDefaultsFactory;
@@ -28,12 +29,15 @@ public class Main {
 		InterfaceWithDefaults iwdo = InterfaceWithDefaultsFactory.create(InterfaceWithDefaultsOverrideImpl::new);
 		LOGGER.debug("Interface Impl with call of overridden default impl: {}", iwdo.sayHelloTo("Christian"));
 		
-		DrinkableBeer.readDrinkableBeer();
-		
 		
 		LOGGER.debug("Method references example");
 		PlaneMethodReferencesExample pmre = new PlaneMethodReferencesExample();
 		pmre.doExample();
+		
+		DrinkableBeer.readDrinkableBeer();
+		
+		LOGGER.debug("Annotations Everywhere, but you don't see them.");
+		PrayFlanders.doIt();
 		
 		LOGGER.debug("End Main");
 	}
